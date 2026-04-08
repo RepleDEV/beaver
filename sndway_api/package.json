@@ -1,0 +1,20 @@
+{
+    "main": "lib/binding.js",
+    "dependencies": {
+        "node-addon-api": "^1.1.0"
+    },
+    "scripts": {
+        "pretest": "tsc",
+        "test": "node --napi-modules ./test/test_binding.js"
+    },
+    "gypfile": true,
+    "name": "sndway_api",
+    "version": "1.0.0",
+    "author": "Ragazzo Chaesa",
+    "license": "GPL-3.0-or-later",
+    "description": "",
+    "devDependencies": {
+        "@types/node": "^25.5.2",
+        "typescript": "^6.0.2"
+    }
+}

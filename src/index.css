@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Afacad", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    color: #FEFDFD;
+}
+
+.font-tnums {
+    font-variant-numeric: tabular-nums;
+}
+
+.bg-button {
+    background-color: rgb(68, 64, 89);
+}
+
+span.mfont {
+    font-family: "Courier Prime", monospace;
+    font-style: normal;
+}
+
+div.panel {
+    background-color: rgb(52, 49, 69);
+
+    border-radius: 1rem;
+}
+
+div#app {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgb(38, 36, 56);
+}
