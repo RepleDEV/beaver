@@ -9,6 +9,8 @@ SndwayAPI::SndwayAPI() {
     this->m_VID = VID;
     this->m_PID = PID;
 
+    this->m_connected = false;
+
     this->m_res = hid_init();
 }
 int SndwayAPI::open() {
