@@ -222,7 +222,7 @@ export function App() {
 
   useEffect(() => {
     const id = setInterval(() => {
-      fetch("/api/report.test")
+      fetch("/api/report")
         .then((res) => res.json())
         .then((report: Report) => {
           useApiStore.getState().setConnected(report.isConnected);
