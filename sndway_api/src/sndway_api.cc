@@ -1,4 +1,8 @@
+#ifdef _WIN64
+#include <hidapi.h>
+#else
 #include <hidapi/hidapi.h>
+#endif
 
 #include "sndway_api.h"
 
