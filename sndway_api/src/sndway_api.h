@@ -1,5 +1,10 @@
 #include <cstdint>
+
+#ifdef _WIN64
+#include <hidapi.h>
+#else
 #include <hidapi/hidapi.h>
+#endif
 
 #define DATA_BUFFER_SIZE 64
 
