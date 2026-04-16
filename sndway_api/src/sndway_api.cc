@@ -31,6 +31,8 @@ uint16_t SndwayAPI::read() {
     if (!this->m_connected || !this->m_handle)
         return 0;
 
+    memset(this->m_buf, 0x00, sizeof(this->m_buf));
+
     // Request data
     this->m_buf[0] = 0xb3;
 
