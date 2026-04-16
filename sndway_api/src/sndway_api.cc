@@ -33,6 +33,12 @@ uint16_t SndwayAPI::read() {
 
     // Request data
     this->m_buf[0] = 0xb3;
+
+#ifdef _WIN64
+    this->m_buf[1] = this->m_buf[0];
+    this->m_buf[0] = 0x01;
+#endif
+
     this->m_res = hid_write(this->m_handle, this->m_buf, 64);
 
     if (this->m_res == -1) {
