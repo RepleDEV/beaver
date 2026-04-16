@@ -20,7 +20,7 @@ int main() {
 
     std::cout << "Reading device..." << std::endl;
     uint16_t reading = api.read();
-    std::cout << "Device reading: " << reading;
+    std::cout << "Device reading: " << reading << std::endl;
 
     return 0;
 }
