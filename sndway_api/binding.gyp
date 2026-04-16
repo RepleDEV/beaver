@@ -27,9 +27,9 @@
           ],
         }],
         ['OS=="win"', {
-          'include_dirs': {
-              '<!(echo %cd%)/hidapi-win/include/'
-          },
+          'include_dirs': [
+              './hidapi-win/include/'
+          ],
           'link_settings': {
             'libraries': [
               '<!(echo %cd%)/hidapi-win/x64/hidapi.lib'
