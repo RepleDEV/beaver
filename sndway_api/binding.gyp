@@ -26,6 +26,16 @@
             '-lhidapi-hidraw'
           ],
         }],
+        ['OS=="win"', {
+          'include_dirs': [
+              './hidapi-win/include/'
+          ],
+          'link_settings': {
+            'libraries': [
+              '<!(echo %cd%)/hidapi-win/x64/hidapi.lib'
+            ],
+          },
+        }],
       ]
     }
   ]

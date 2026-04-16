@@ -1,4 +1,8 @@
+#ifdef _WIN64
+#include <hidapi.h>
+#else
 #include <hidapi/hidapi.h>
+#endif
 
 #include "sndway_api.h"
 
@@ -27,8 +31,16 @@ uint16_t SndwayAPI::read() {
     if (!this->m_connected || !this->m_handle)
         return 0;
 
+    memset(this->m_buf, 0x00, sizeof(this->m_buf));
+
     // Request data
     this->m_buf[0] = 0xb3;
+
+#ifdef _WIN64
+    this->m_buf[1] = this->m_buf[0];
+    this->m_buf[0] = 0x01;
+#endif
+
     this->m_res = hid_write(this->m_handle, this->m_buf, 64);
 
     if (this->m_res == -1) {
